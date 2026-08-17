@@ -1,0 +1,30 @@
+[NEC verify cfg B] n=2031; max|nec-(last-first)|=0.000000; happy_ending==(last>first): 100.00%; ==(nec>0): 100.00%
+[NEC verify cfg A] n=2037; max|nec-(last-first)|=0.000000; happy_ending==(last>first): 100.00%; ==(nec>0): 100.00%
+[variability_ratio verify] max|ratio - client_std/counselor_std| = 0.000050 (n=2013)
+[lexicon_used values cfg A]: {"annomi": "NRC-VAD v2.1 EN unigrams", "cactus": "NRC-VAD v2.1 EN unigrams", "cpsycoun": "Chinese-Simplified-NRC-VAD-Lexicon.txt [native col, scale=0_1]", "esconv": "NRC-VAD v2.1 EN unigrams", "kmi": "Korean-NRC-VAD-Lexicon.txt [native col, scale=0_1]", "kokorochat": "Japanese-NRC-VAD-Lexicon.txt [native col, scale=0_1]", "psy_insight": "NRC-VAD v2.1 EN unigrams", "psydial": "Chinese-Simplified-NRC-VAD-Lexicon.txt [native col, scale=0_1]", "simpsydial": "Chinese-Simplified-NRC-VAD-Lexicon.txt [native col, scale=0_1]", "smile": "Chinese-Simplified-NRC-VAD-Lexicon.txt [native col, scale=0_1]", "soulchat": "Chinese-Simplified-NRC-VAD-Lexicon.txt [native col, scale=0_1]"}
+[lexicon_used values cfg B]: {"annomi": "NRC-VAD v2.1 EN unigrams", "cactus": "NRC-VAD v2.1 EN unigrams", "cpsycoun": "NRC-VAD v2.1 EN unigrams", "esconv": "NRC-VAD v2.1 EN unigrams", "kmi": "NRC-VAD v2.1 EN unigrams", "kokorochat": "NRC-VAD v2.1 EN unigrams", "psy_insight": "NRC-VAD v2.1 EN unigrams", "psydial": "NRC-VAD v2.1 EN unigrams", "simpsydial": "NRC-VAD v2.1 EN unigrams", "smile": "NRC-VAD v2.1 EN unigrams", "soulchat": "NRC-VAD v2.1 EN unigrams"}
+[tokenizer cfg A]: {"annomi": "en", "cactus": "en", "cpsycoun": "zh", "esconv": "en", "kmi": "ko", "kokorochat": "ja", "psy_insight": "en", "psydial": "zh", "simpsydial": "zh", "smile": "zh", "soulchat": "zh"}
+[DimB] datasets with claude (3 judges): ['annomi', 'cactus', 'cpsycoun', 'esconv', 'kmi', 'kokorochat', 'soulchat']
+[DimA pilot] datasets with S1S2S3: ['cpsycoun', 'kmi', 'kokorochat', 'psydial', 'simpsydial', 'smile', 'soulchat']
+[DimB pilot S1-S3 gpt pooled] n=219, mean_diff=0.0061, abs=0.0644
+[AnnoMI dimB gpt] S1 md5==S3 md5: True
+[DimB pilot ids cpsycoun] claudeS3=20, gptS3=40 (chua pilot20: 20), gptS1=20 (chua pilot20: 20)
+[DimB pilot ids psydial] claudeS3=20, gptS3=40 (chua pilot20: 20), gptS1=20 (chua pilot20: 20)
+[DimB pilot ids simpsydial] claudeS3=20, gptS3=40 (chua pilot20: 20), gptS1=20 (chua pilot20: 20)
+[DimB pilot ids soulchat] claudeS3=20, gptS3=40 (chua pilot20: 20), gptS1=20 (chua pilot20: 20)
+[DimB pilot ids kmi] claudeS3=20, gptS3=40 (chua pilot20: 20), gptS1=40 (chua pilot20: 20)
+[DimB pilot ids smile] claudeS3=19, gptS3=19 (chua pilot20: 19), gptS1=19 (chua pilot20: 19)
+[DimB pilot ids kokorochat] claudeS3=20, gptS3=2 (chua pilot20: 0), gptS1=20 (chua pilot20: 20)
+[smile] in dimC not in dimA-full: ['smile_74']
+[token ratio counselor/client cfg B]:
+  annomi: client=402.259, counselor=475.438, ratio=1.182
+  cactus: client=378.51, counselor=441.155, ratio=1.166
+  cpsycoun: client=89.15, counselor=170.4, ratio=1.911
+  esconv: client=222.34, counselor=264.75, ratio=1.191
+  kmi: client=122.825, counselor=128.975, ratio=1.05
+  kokorochat: client=457.675, counselor=646.935, ratio=1.414
+  psy_insight: client=77.04, counselor=93.245, ratio=1.21
+  psydial: client=875.835, counselor=745.835, ratio=0.852
+  simpsydial: client=415.64, counselor=556.125, ratio=1.338
+  smile: client=259.885, counselor=406.63, ratio=1.565
+  soulchat: client=181.375, counselor=324.165, ratio=1.787

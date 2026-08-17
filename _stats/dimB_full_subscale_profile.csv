@@ -1,0 +1,12 @@
+dataset,goal_mean,goal_std,approach_mean,approach_std,bond_mean,bond_std,total_mean,total_std,judges
+annomi,3.84,1.017,3.769,1.038,3.672,0.797,3.76,0.934,"claude,gemini,gpt"
+cactus,4.41,0.32,4.355,0.482,4.106,0.266,4.29,0.336,"claude,gemini,gpt"
+cpsycoun,3.476,0.428,3.238,0.419,3.538,0.279,3.418,0.355,"claude,gemini,gpt"
+esconv,3.91,0.519,4.032,0.611,4.079,0.459,4.007,0.512,"claude,gemini,gpt"
+kmi,4.241,0.215,4.084,0.316,3.938,0.14,4.088,0.199,"claude,gemini,gpt"
+kokorochat,4.053,0.521,3.989,0.628,4.095,0.492,4.046,0.531,"claude,gemini,gpt"
+psy_insight,3.74,0.673,3.664,0.652,3.411,0.506,3.605,0.577,"gemini,gpt"
+psydial,4.33,0.292,4.309,0.32,4.336,0.342,4.325,0.291,"gemini,gpt"
+simpsydial,4.442,0.248,4.542,0.239,4.314,0.19,4.433,0.201,"gemini,gpt"
+smile,4.338,0.339,4.322,0.428,4.295,0.371,4.318,0.365,"gemini,gpt"
+soulchat,3.937,0.307,3.942,0.354,4.096,0.293,3.992,0.3,"claude,gemini,gpt"

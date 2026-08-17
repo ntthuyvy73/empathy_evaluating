@@ -1,0 +1,9 @@
+x,y,n,pearson_pooled_z,spearman_pooled_z
+dimA_overall,dimB_total,2111,0.3562,0.3264
+dimA_overall,client_valence_nec,2030,-0.0309,-0.0207
+dimB_total,client_valence_nec,2030,0.1757,0.1875
+dimA_overall,client_valence_emo_std,2030,-0.033,-0.0392
+dimB_total,client_valence_emo_std,2030,0.069,0.0938
+dimA_overall,total_tokens,2111,0.0416,0.0538
+dimB_total,total_tokens,2111,0.2908,0.3236
+client_valence_nec,counselor_valence_emo_mean,2013,0.0243,0.0331
