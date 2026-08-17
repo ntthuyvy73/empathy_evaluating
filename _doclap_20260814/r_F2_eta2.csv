@@ -1,0 +1,14 @@
+metric,eta2_between_dataset
+A_ASCQ,0.569
+A_EPC,0.548
+A_overall,0.536
+A_CAC,0.495
+A_AR,0.482
+A_TRA,0.469
+B_bond,0.322
+B_total,0.288
+B_approach,0.288
+B_goal,0.258
+C_vstd,0.077
+C_vmean,0.066
+C_nec,0.061

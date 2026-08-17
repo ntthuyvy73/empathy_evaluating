@@ -1,0 +1,61 @@
+[N1] 'Phụ phí EPC' (EPC − TB 4 trục còn lại) như vân tay guardrail:
+             EPC_premium  voice
+esconv            -0.233  human
+annomi             0.060  human
+kokorochat         0.332  human
+psy_insight        0.341  human
+smile              0.442    llm
+soulchat           0.450    llm
+cpsycoun           0.631    llm
+psydial            0.648    llm
+simpsydial         0.755    llm
+cactus             0.917    llm
+kmi                1.622    llm
+human-voiced: max=0.341 | llm-voiced: min=0.442 | tách hoàn hảo: True
+Mann–Whitney U=0, p=0.0061 (n=4 vs 7)
+p hoán vị chính xác 2 phía cho tách hoàn hảo (U=0): 0.0061
+
+[N2] Đồng thuận judge ~ SD nội dataset (range restriction):
+dim A: Spearman(agreement, SD) = 0.627 (p=0.0388)
+dim B: Spearman(agreement, SD) = 0.836 (p=0.0013)
+
+[N3] Judge bias đổi chiều theo công cụ (điểm TB chuẩn hóa % thang):
+  claude : dim A 2.613 (32.3% thang) | dim B 3.792 (69.8% thang) | lệch B−A = +37.5 điểm %
+  gemini : dim A 2.535 (30.7% thang) | dim B 4.228 (80.7% thang) | lệch B−A = +50.0 điểm %
+  gpt    : dim A 2.978 (39.6% thang) | dim B 3.976 (74.4% thang) | lệch B−A = +34.8 điểm %
+
+[N4] Đối chiếu eta2 với file cũ _agg_discriminative_power.csv:
+dim   metric  between_ds_sd  within_ds_sd  grand_mean  pct_at_top  range_ds_means
+  A      CAC          0.593         0.536       2.562       0.000           1.723
+  A      EPC          0.747         0.637       3.159       0.000           2.498
+  A       AR          0.569         0.519       2.526       0.000           1.588
+  A      TRA          0.536         0.492       2.783       0.000           1.508
+  A      ACQ          0.695         0.492       2.513       0.047           2.235
+  A  overall          0.587         0.479       2.709       0.000           1.822
+  B     goal          0.280         0.440       4.026       4.358           0.934
+  B approach          0.336         0.497       3.990       6.158           1.197
+  B     bond          0.280         0.370       3.982       2.321           0.779
+  B    total          0.286         0.415       3.999       2.084           0.917
+
+(của tôi)
+    metric  eta2_between_dataset
+    A_ASCQ                 0.569
+     A_EPC                 0.548
+ A_overall                 0.536
+     A_CAC                 0.495
+      A_AR                 0.482
+     A_TRA                 0.469
+    B_bond                 0.322
+   B_total                 0.288
+B_approach                 0.288
+    B_goal                 0.258
+    C_vstd                 0.077
+   C_vmean                 0.066
+     C_nec                 0.061
+
+[N5] Đối chiếu nhóm provenance với _agg_group_means_official.csv:
+          group  dimA_overall  dimB_total3  client_valence_nec  client_valence_happy_ending  counselor_valence_emo_mean
+           real         2.693        3.886               0.048                        0.691                       0.165
+      semi-real         2.890        4.031               0.046                        0.771                       0.161
+ semi-synthetic         2.265        3.858               0.061                        0.719                       0.183
+fully-synthetic         3.072        4.238               0.070                        0.783                       0.187

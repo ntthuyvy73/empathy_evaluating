@@ -1,0 +1,12 @@
+dataset,n,total,sd,goal,approach,bond,p_ge4,prov
+esconv,200,4.007,0.512,3.91,4.032,4.079,62.0,real
+kokorochat,200,4.046,0.531,4.053,3.989,4.095,65.0,real
+psy_insight,200,3.605,0.573,3.7,3.646,3.471,25.0,real
+annomi,112,3.76,0.934,3.84,3.769,3.672,57.143,semi-real
+psydial,200,4.182,0.273,4.146,4.151,4.249,83.0,semi-real
+smile,199,4.166,0.369,4.158,4.158,4.182,80.402,semi-synthetic
+soulchat,200,3.992,0.3,3.937,3.942,4.096,52.5,semi-synthetic
+cpsycoun,200,3.418,0.355,3.476,3.238,3.538,6.5,semi-synthetic
+cactus,200,4.29,0.336,4.41,4.355,4.106,81.0,fully-synthetic
+simpsydial,200,4.335,0.181,4.333,4.435,4.238,99.0,fully-synthetic
+kmi,200,4.088,0.199,4.241,4.084,3.938,68.0,fully-synthetic

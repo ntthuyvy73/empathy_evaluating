@@ -1,0 +1,12 @@
+dataset,rho_B_tokens,rho_A_tokens,median_tokens
+esconv,0.321,0.071,447.0
+kokorochat,0.591,0.427,1074.0
+psy_insight,0.562,0.308,130.5
+annomi,0.516,0.282,800.0
+psydial,0.33,-0.111,1518.0
+smile,0.095,-0.217,640.0
+soulchat,0.092,-0.065,456.0
+cpsycoun,0.407,-0.057,237.0
+cactus,0.142,0.047,819.5
+simpsydial,0.327,-0.127,909.0
+kmi,0.22,0.192,234.0

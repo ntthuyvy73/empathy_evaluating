@@ -1,0 +1,217 @@
+========================================================================================
+PHẦN A — DIM A (MindEval, thang 1–6, S3 full, 3 judge)
+========================================================================================
+
+[A1] Overall mức hội thoại (TB 3 judge):
+               n   mean     sd  median    p_lt3   p_ge4             prov
+dataset                                                                 
+esconv       200  1.798  0.359   1.750  100.000   0.000             real
+kokorochat   200  2.917  0.497   2.933   53.500   1.000             real
+psy_insight  200  3.364  0.886   3.492   30.000  27.500             real
+annomi       112  3.621  1.079   3.900   27.679  46.429        semi-real
+psydial      200  2.481  0.392   2.500   92.000   0.000        semi-real
+smile        199  2.321  0.422   2.317   94.975   0.000   semi-synthetic
+soulchat     200  2.191  0.332   2.217   99.000   0.000   semi-synthetic
+cpsycoun     200  2.285  0.412   2.300   95.000   0.000   semi-synthetic
+cactus       200  3.376  0.267   3.383    8.500   1.000  fully-synthetic
+simpsydial   200  3.188  0.362   3.250   23.500   0.000  fully-synthetic
+kmi          200  2.653  0.265   2.675   91.000   0.000  fully-synthetic
+
+[A2] Tiểu thang (TB 3 judge) + độ trội EPC so với 4 trục còn lại:
+               CAC    EPC     AR    TRA   ASCQ  EPC_minus_rest
+dataset                                                       
+esconv       1.755  1.612  1.855  2.068  1.702          -0.233
+kokorochat   2.750  3.182  2.874  3.130  2.647           0.332
+psy_insight  3.266  3.637  3.145  3.188  3.584           0.341
+annomi       3.478  3.669  3.443  3.576  3.938           0.060
+psydial      2.356  3.000  2.262  2.722  2.067           0.648
+smile        2.170  2.674  2.138  2.407  2.215           0.442
+soulchat     2.026  2.551  1.968  2.271  2.138           0.450
+cpsycoun     2.110  2.790  1.996  2.222  2.307           0.631
+cactus       3.360  4.110  3.178  3.419  2.815           0.917
+simpsydial   2.949  3.792  2.962  3.336  2.901           0.755
+kmi          2.364  3.950  2.369  2.622  1.958           1.622
+
+[A3] Điểm TB theo judge (hàng=dataset):
+judge        claude  gemini    gpt  gpt_minus_claude
+dataset                                             
+esconv        1.747   1.318  2.331             0.584
+kokorochat    2.950   2.750  3.050             0.100
+psy_insight   3.134   3.826  3.132            -0.002
+annomi        3.382   4.051  3.429             0.047
+psydial       2.538   2.074  2.831             0.293
+smile         2.295   1.870  2.796             0.501
+soulchat      2.085   1.762  2.724             0.639
+cpsycoun      2.204   1.862  2.788             0.584
+cactus        3.266   3.303  3.559             0.293
+simpsydial    2.951   3.286  3.326             0.375
+kmi           2.524   2.443  2.991             0.467
+Chênh lệch judge toàn cục: {'claude': 2.613, 'gemini': 2.535, 'gpt': 2.978}
+
+[A4] Đồng thuận giữa judge (overall, mức record):
+             r_cl_ge  r_cl_gp  r_ge_gp  mean_pairwise_r  ICC2k    n
+dataset                                                            
+esconv         0.712    0.732    0.671            0.705  0.525  200
+kokorochat     0.614    0.678    0.644            0.645  0.730  200
+psy_insight    0.716    0.774    0.647            0.712  0.750  200
+annomi         0.856    0.891    0.796            0.848  0.864  112
+psydial        0.531    0.703    0.639            0.624  0.613  200
+smile          0.661    0.726    0.665            0.684  0.596  199
+soulchat       0.598    0.695    0.688            0.660  0.484  200
+cpsycoun       0.736    0.757    0.754            0.749  0.616  200
+cactus         0.483    0.486    0.483            0.484  0.563  200
+simpsydial     0.649    0.742    0.727            0.706  0.720  200
+kmi            0.620    0.669    0.641            0.643  0.584  200
+Trung bình pairwise r (11 ds): 0.678 | ICC(2,k) trung bình: 0.64
+[A4b] Kendall W xếp hạng 11 dataset giữa 3 judge (dim A): 0.980
+Spearman xếp hạng dataset giữa cặp judge: [0.982, 0.973, 0.955]
+
+[A5] SD overall nội dataset (record-level TB 3 judge) — thước đo độ đa dạng chất lượng:
+dataset
+esconv         0.359
+kokorochat     0.497
+psy_insight    0.886
+annomi         1.079
+psydial        0.392
+smile          0.422
+soulchat       0.332
+cpsycoun       0.412
+cactus         0.267
+simpsydial     0.362
+kmi            0.265
+
+[A6] Tương quan tiểu thang dim A (pooled within-dataset, TB 3 judge):
+        CAC    EPC     AR    TRA   ASCQ
+CAC   0.999  0.711  0.941  0.846  0.660
+EPC   0.711  0.999  0.668  0.650  0.556
+AR    0.941  0.668  0.999  0.877  0.704
+TRA   0.846  0.650  0.877  0.999  0.724
+ASCQ  0.660  0.556  0.704  0.724  0.999
+
+========================================================================================
+PHẦN B — DIM B (WAI-O-S, thang 1–5, S3 full, 3 judge)
+========================================================================================
+
+[B1] WAI total & 3 chiều (TB 3 judge):
+               n  total     sd   goal  approach   bond   p_ge4             prov
+dataset                                                                        
+esconv       200  4.007  0.512  3.910     4.032  4.079  62.000             real
+kokorochat   200  4.046  0.531  4.053     3.989  4.095  65.000             real
+psy_insight  200  3.605  0.573  3.700     3.646  3.471  25.000             real
+annomi       112  3.760  0.934  3.840     3.769  3.672  57.143        semi-real
+psydial      200  4.182  0.273  4.146     4.151  4.249  83.000        semi-real
+smile        199  4.166  0.369  4.158     4.158  4.182  80.402   semi-synthetic
+soulchat     200  3.992  0.300  3.937     3.942  4.096  52.500   semi-synthetic
+cpsycoun     200  3.418  0.355  3.476     3.238  3.538   6.500   semi-synthetic
+cactus       200  4.290  0.336  4.410     4.355  4.106  81.000  fully-synthetic
+simpsydial   200  4.335  0.181  4.333     4.435  4.238  99.000  fully-synthetic
+kmi          200  4.088  0.199  4.241     4.084  3.938  68.000  fully-synthetic
+
+[B2] Trần thang đo: phân bố điểm item toàn cục (n=75828):
+score
+1.0     0.5
+2.0     2.7
+3.0    13.5
+4.0    62.8
+5.0    20.4
+Tỷ lệ điểm item ≥4: 80.2 % | ≥4.5: 20.4 % | ≤2: 2.5 %
+Khoảng total theo dataset (min–max):
+              min   max
+dataset                
+esconv       1.66  4.93
+kokorochat   1.37  5.00
+psy_insight  1.00  4.70
+annomi       1.00  4.83
+psydial      2.09  4.82
+smile        2.71  4.81
+soulchat     2.87  4.55
+cpsycoun     2.60  4.22
+cactus       3.36  4.87
+simpsydial   3.95  4.97
+kmi          3.56  4.54
+
+[B3] Điểm TB từng item (toàn cục):
+item
+Q1     4.027
+Q2     4.046
+Q3     4.103
+Q4     3.926
+Q5     4.030
+Q6     3.906
+Q7     4.119
+Q8     3.906
+Q9     3.977
+Q10    3.784
+Q11    3.929
+Q12    4.236
+Item thấp nhất từng dataset: {'esconv': 'Q4', 'kokorochat': 'Q10', 'psy_insight': 'Q10', 'annomi': 'Q10', 'psydial': 'Q4', 'smile': 'Q10', 'soulchat': 'Q6', 'cpsycoun': 'Q6', 'cactus': 'Q10', 'simpsydial': 'Q10', 'kmi': 'Q10'}
+
+[B4] SD giữa 3 run nội một judge (item-level): mean=0.089 | % run_sd=0: 81.5%
+judge
+claude    0.090
+gemini    0.111
+gpt       0.067
+
+[B5] Đồng thuận judge dim B (total):
+             r_cl_ge  r_cl_gp  r_ge_gp  mean_pairwise_r  ICC2k
+dataset                                                       
+esconv         0.824    0.803    0.854            0.827  0.815
+kokorochat     0.871    0.881    0.822            0.858  0.879
+psy_insight    0.887    0.905    0.889            0.894  0.946
+annomi         0.922    0.953    0.936            0.937  0.964
+psydial        0.630    0.673    0.654            0.652  0.538
+smile          0.780    0.742    0.781            0.768  0.630
+soulchat       0.648    0.530    0.666            0.615  0.520
+cpsycoun       0.657    0.553    0.756            0.655  0.691
+cactus         0.853    0.861    0.870            0.861  0.893
+simpsydial     0.512    0.649    0.504            0.555  0.468
+kmi            0.685    0.627    0.672            0.661  0.533
+Trung bình pairwise r: 0.753 | ICC(2,k) TB: 0.716
+Spearman xếp hạng dataset giữa cặp judge (dim B): [0.773, 0.818, 0.791]
+Điểm TB theo judge (dim B): {'claude': 3.792, 'gemini': 4.228, 'gpt': 3.976}
+
+[B6] Tương quan 3 chiều WAI (pooled within-dataset):
+           goal  approach   bond
+goal      0.999     0.908  0.767
+approach  0.908     0.999  0.833
+bond      0.767     0.833  0.999
+
+========================================================================================
+PHẦN C — DIM C (UED/NRC-VAD; client & counselor)
+========================================================================================
+
+[C1] Cấu hình B (EN lexicon) — chỉ số valence client + tông counselor:
+             n_valid  v_mean   v_std     nec    happy    rise   recov  co_v_mean  lexcov   cli_tok    co_tok             prov  co_minus_cli_v
+dataset                                                                                                                                      
+esconv           200  0.1659  0.1392  0.0817  77.5000  0.0194  0.0191     0.1754  0.6995  222.3400  264.7500             real          0.0095
+kokorochat       200  0.1776  0.1367  0.0477  74.5000  0.0190  0.0186     0.1731  0.6755  457.6750  646.9350             real         -0.0045
+psy_insight      141  0.1527  0.1173 -0.0001  49.6454  0.0167  0.0164     0.1422  0.6793   77.0400   93.2450             real         -0.0105
+annomi           110  0.1599  0.1334  0.0271  64.5455  0.0187  0.0181     0.1377  0.6554  402.2589  475.4375        semi-real         -0.0222
+psydial          200  0.1646  0.1424  0.0562  84.0000  0.0193  0.0189     0.1735  0.6940  875.8350  745.8350        semi-real          0.0089
+smile            198  0.1629  0.1420  0.0865  79.2929  0.0194  0.0190     0.1817  0.6900  259.8850  406.6300   semi-synthetic          0.0188
+soulchat         200  0.1551  0.1439  0.0760  76.0000  0.0201  0.0197     0.1942  0.6737  181.3750  324.1650   semi-synthetic          0.0391
+cpsycoun         182  0.1406  0.1315  0.0172  59.3407  0.0189  0.0181     0.1740  0.6620   89.1500  170.4000   semi-synthetic          0.0334
+cactus           200  0.1463  0.1384  0.0494  72.5000  0.0191  0.0187     0.1792  0.6915  378.5100  441.1550  fully-synthetic          0.0329
+simpsydial       200  0.1664  0.1381  0.0850  88.0000  0.0189  0.0185     0.1985  0.6882  415.6400  556.1250  fully-synthetic          0.0321
+kmi              200  0.1823  0.1284  0.0763  74.5000  0.0180  0.0178     0.1820  0.7079  122.8250  128.9750  fully-synthetic         -0.0003
+
+[C2] Hội tụ cấu hình A↔B (record-level, 7 dataset non-EN):
+              n  r_emo_mean_AB  r_nec_AB  happy_agree_%  lexcov_A  lexcov_B
+dataset                                                                    
+kokorochat  200          0.378     0.393         59.500     0.229     0.675
+psydial     200          0.230     0.114         49.500     0.266     0.694
+smile       198          0.170     0.119         45.960     0.262     0.690
+soulchat    200          0.118     0.073         47.000     0.262     0.674
+cpsycoun    182          0.071     0.082         45.055     0.260     0.662
+simpsydial  200          0.143     0.065         38.500     0.266     0.688
+kmi         200          0.416     0.315         61.000     0.307     0.708
+
+[C3] Valence theo nhóm provenance (cấu hình B):
+                 client_valence_emo_mean  counselor_valence_emo_mean  client_valence_nec  client_valence_emo_std  co_minus_cli
+provenance                                                                                                                    
+real                              0.1668                      0.1671              0.0478                  0.1326        0.0003
+semi-real                         0.1629                      0.1608              0.0459                  0.1392       -0.0021
+semi-synthetic                    0.1532                      0.1841              0.0612                  0.1394        0.0309
+fully-synthetic                   0.1650                      0.1866              0.0702                  0.1349        0.0216
+
+DONE BƯỚC 2

@@ -1,0 +1,10 @@
+cặp,spearman_rho,p
+A_overall ↔ B_total,0.182,0.5926
+A_overall ↔ C_nec,-0.409,0.2115
+A_overall ↔ C_happy,-0.369,0.2641
+B_total ↔ C_nec,0.655,0.0289
+B_total ↔ C_happy,0.724,0.0117
+A_overall ↔ tokens,0.245,0.4669
+B_total ↔ tokens,0.573,0.0655
+A_TRA ↔ B_total,0.309,0.355
+A_TRA ↔ B_bond,0.082,0.811

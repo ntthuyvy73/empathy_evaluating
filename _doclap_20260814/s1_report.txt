@@ -1,0 +1,47 @@
+== DIM A ==
+judge        claude  gemini  gpt
+dataset                         
+annomi          112     112  112
+cactus          200     200  200
+cpsycoun        200     200  200
+esconv          200     200  200
+kmi             200     200  200
+kokorochat      200     200  200
+psy_insight     200     200  200
+psydial         200     200  200
+simpsydial      200     200  200
+smile           199     199  199
+soulchat        200     200  200
+dup dimA bị loại: 0; tổng record dim A = 6333 (khớp 6.333)
+overall==mean(5 tiểu thang) trong ±0.05: 100.00% (6333/6333)
+Số ô điểm null dim A: 0
+
+== DIM B ==
+judge        claude  gemini  gpt
+dataset                         
+annomi          112     112  112
+cactus          200     200  200
+cpsycoun        200     200  200
+esconv          200     200  200
+kmi             200     200  200
+kokorochat      200     200  200
+psy_insight     200     200  200
+psydial         200     200  200
+simpsydial      200     200  200
+smile           199     199  199
+soulchat        200     200  200
+dup dimB bị loại: 0; tổng record dim B = 6333 (khớp 6.333)
+Số điểm item None theo judge: {'claude': 168, 'gemini': 0, 'gpt': 0}
+total==mean(3 chiều) trong ±0.02: 99.78%
+
+== DIM C ==
+dim C cấu hình A: n dòng = {'annomi': 112, 'cactus': 200, 'cpsycoun': 200, 'esconv': 200, 'kmi': 200, 'kokorochat': 200, 'psy_insight': 200, 'psydial': 200, 'simpsydial': 200, 'smile': 200, 'soulchat': 200}
+   n hợp lệ (client valence không NaN) = {'annomi': 110, 'cactus': 200, 'cpsycoun': 188, 'esconv': 200, 'kmi': 200, 'kokorochat': 200, 'psy_insight': 141, 'psydial': 200, 'simpsydial': 200, 'smile': 198, 'soulchat': 200}
+dim C cấu hình B: n dòng = {'annomi': 112, 'cactus': 200, 'cpsycoun': 200, 'esconv': 200, 'kmi': 200, 'kokorochat': 200, 'psy_insight': 200, 'psydial': 200, 'simpsydial': 200, 'smile': 200, 'soulchat': 200}
+   n hợp lệ (client valence không NaN) = {'annomi': 110, 'cactus': 200, 'cpsycoun': 182, 'esconv': 200, 'kmi': 200, 'kokorochat': 200, 'psy_insight': 141, 'psydial': 200, 'simpsydial': 200, 'smile': 198, 'soulchat': 200}
+
+== JOIN ==
+A∩B (cặp dataset-id): 2111 / A=2111 / B=2111
+A∩C_B: 2111; chỉ có trong C: [('smile', 'smile_74')]
+
+master: 2111 dòng; thiếu A_overall: 0; thiếu B_total: 0; thiếu C: 81

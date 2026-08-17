@@ -1,0 +1,10 @@
+cặp,pooled_within_r,min_ds,max_ds
+A_overall ↔ B_total,0.389,0.14,0.703
+TRA ↔ B_total,0.497,0.201,0.77
+TRA ↔ B_bond,0.413,0.046,0.756
+A_overall ↔ client_valence_nec,-0.031,-0.146,0.142
+B_total ↔ client_valence_nec,0.176,-0.171,0.453
+ASCQ ↔ B_total,0.249,0.026,0.472
+EPC ↔ B_total,0.218,-0.008,0.623
+A_overall ↔ total_tokens,0.044,-0.219,0.383
+B_total ↔ total_tokens,0.298,0.047,0.5
