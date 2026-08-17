@@ -1,0 +1,11 @@
+y,term,coef,se_naive,p_naive,se_cluster,p_cluster,p_perm_exact
+dimA_overall,semi-real vs real,0.2186,0.0511,1.94e-05,0.5452,0.6969,0.70932
+dimA_overall,semi-synthetic vs real,-0.4269,0.0387,1.67e-27,0.3958,0.306,0.41411
+dimA_overall,fully-synthetic vs real,0.3866,0.0394,2.72e-22,0.4412,0.4015,0.46252
+dimA_overall,ln_tokens,-0.0195,0.0187,2.99e-01,0.1215,0.8759,
+dimA_overall,"PROVENANCE-BLOCK (joint F, df=3)",148.426,,2.96e-87,,,0.44264
+dimB_total3,semi-real vs real,-0.1858,0.0323,1.01e-08,0.1113,0.126,0.36606
+dimB_total3,semi-synthetic vs real,-0.0387,0.0245,1.14e-01,0.1278,0.7682,0.83568
+dimB_total3,fully-synthetic vs real,0.2367,0.0249,5.09e-21,0.0831,0.0172,0.17898
+dimB_total3,ln_tokens,0.3032,0.0118,5.12e-126,0.0393,0.0,
+dimB_total3,"PROVENANCE-BLOCK (joint F, df=3)",79.791,,6.89e-49,,,0.12433

@@ -1,0 +1,5 @@
+file,dataset,config,n_records,judge_models
+Psy-Insight_S3_claude_9router_full_wai_judgments.jsonl,psy_insight,S3,200,"{""openai/cc/claude-sonnet-4-6"": 97, ""openai/ag/claude-sonnet-4-6"": 103}"
+PsyDial_S3_claude_9router_full_wai_judgments.jsonl,psydial,S3,200,"{""openai/ag/claude-sonnet-4-6"": 108, ""openai/cc/claude-sonnet-4-6"": 92}"
+simpsydial_S3_claude_9router_full_wai_judgments.jsonl,simpsydial,S3,200,"{""openai/ag/claude-sonnet-4-6"": 21, ""openai/cc/claude-sonnet-4-6"": 179}"
+smile_S3_claude_9router_full_wai_judgments.jsonl,smile,S3,199,"{""openai/ag/claude-sonnet-4-6"": 57, ""openai/lkp/kr/claude-sonnet-4.6"": 6, ""openai/cc/claude-sonnet-4-6"": 136}"

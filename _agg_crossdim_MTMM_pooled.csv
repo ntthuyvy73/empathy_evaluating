@@ -1,0 +1,11 @@
+x,y,n,pearson_pooled,spearman_pooled
+dimA_overall,dimB_total3,2111,0.3752,0.3487
+dimA_overall,client_valence_nec,2030,-0.0309,-0.0207
+dimB_total3,client_valence_nec,2030,0.1724,0.1823
+dimA_overall,client_valence_emo_std,2030,-0.033,-0.0392
+dimB_total3,client_valence_emo_std,2030,0.0679,0.093
+dimB_total3,total_tokens,2111,0.2911,0.3193
+dimA_overall,total_tokens,2111,0.0416,0.0538
+dimB_total3,counselor_n_tokens,2111,0.2542,0.2825
+dimA_overall,counselor_n_tokens,2111,0.0438,0.0537
+client_valence_nec,total_tokens,2031,0.0008,0.0038

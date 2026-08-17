@@ -1,0 +1,116 @@
+PASS | master n=2111 | n=2111
+PASS | dimA full: 3 judge x 2111 = 6333 luot cham | n=6333
+PASS | dimA judges = claude/gemini/gpt | ['claude', 'gemini', 'gpt']
+PASS | moi hoi thoai co du 3 judge (Dim A) | min=3
+PASS | merge TRA vao master: 2111/2111 khop | khop=2111
+PASS | overall (tu truc) tai lap dimA_overall master (tol 1e-6) 
+========================================================================
+ASSERT NEN
+========================================================================
+PASS | pooled-z A<->B tai lap 0.3752 (tol 0.003) | r=0.3752, n=2111
+PASS | Spearman B<->happy tai lap 0.724 (tol 0.005) | rho=0.724
+
+========================================================================
+B1. O HOI TU MONOTRAIT-HETEROMETHOD: TRA (Chieu A) <-> WAI total (Chieu B)
+========================================================================
+pooled-z noi bo dataset: r_pearson=0.4767 (spearman 0.4509), n=2111
+cap dataset: rho=0.309 (p=0.355), jk[0.127,0.6] (nhay nhat: bo annomi -> 0.6), boot95%[-0.412,0.86], cung dau 79.7%
+
+========================================================================
+B2. PHAN BIET KY NANG <-> LIEN MINH (khong chua TRA)
+========================================================================
+skill_core = mean(CAC,AR): pooled-z r=0.3920 (n=2111); dataset rho=0.182 (p=0.5926), boot95%[-0.519,0.815]
+A_minus_TRA = mean(CAC,EPC,AR,ACQ): pooled-z r=0.3411 (n=2111); dataset rho=0.045 (p=0.8944), boot95%[-0.577,0.778]
+TRA <-> skill_core (cung phuong phap, khac trait): pooled-z r=0.8598; dataset rho=0.973 (p=0.0)
+
+========================================================================
+B3. HIEU UNG DO DAI: TRA vs WAI (cung do lien minh, khac phuong phap)
+========================================================================
+WAI total (B)    pooled-z r(., ln tokens)=+0.2977; b_ln=+0.3032 (SE_cluster=0.0393, p_cluster=0.0000)
+TRA (A)          pooled-z r(., ln tokens)=+0.1355; b_ln=+0.1337 (SE_cluster=0.1046, p_cluster=0.2300)
+skill_core (A)   pooled-z r(., ln tokens)=+0.0936; b_ln=+0.0333 (SE_cluster=0.1153, p_cluster=0.7784)
+A overall        pooled-z r(., ln tokens)=+0.0536; b_ln=-0.0195 (SE_cluster=0.1215, p_cluster=0.8759)
+
+========================================================================
+B4. TONG COUNSELOR NOI-NGON-NGU (kiem soat nhieu dich may)
+========================================================================
+PASS | EN: nhan human/llm khop master 
+[EN] human (annomi,esconv,psy_insight): mean tone theo bo = annomi=0.138, esconv=0.175, psy_insight=0.142
+[EN] LLM (cactus):   mean tone theo bo = cactus=0.179
+[EN] cap bo LLM>human: 3/3; muc hoi thoai: human 0.1552 vs LLM 0.1792, MW p=6.55e-13, rank-biserial=-0.351
+PASS | ZH: nhan human/llm khop master 
+[ZH] human (psydial): mean tone theo bo = psydial=0.173
+[ZH] LLM (cpsycoun,simpsydial,smile,soulchat):   mean tone theo bo = cpsycoun=0.174, simpsydial=0.198, smile=0.182, soulchat=0.194
+[ZH] cap bo LLM>human: 4/4; muc hoi thoai: human 0.1735 vs LLM 0.1872, MW p=4.17e-10, rank-biserial=-0.286
+
+========================================================================
+B5. HOLM / BH cho cac tuong quan cap dataset (Bang 7)
+========================================================================
+         pair    rho      p  p_holm_full6  p_bh_full6  p_holm_conv2
+  dimA<->dimB  0.182 0.5926        0.6345      0.5926           NaN
+ dimA<->happy -0.369 0.2641        0.6345      0.3169           NaN
+ dimB<->happy  0.724 0.0117        0.0702      0.0702        0.0234
+   dimA<->nec -0.409 0.2115        0.6345      0.3169           NaN
+   dimB<->nec  0.655 0.0289        0.1445      0.0867        0.0289
+dimB<->tokens  0.573 0.0655        0.2620      0.1310           NaN
+
+========================================================================
+B6. PILOT CHIEU B S1-S3 (judge gpt): trung binh cac lan chay roi ghep cap
+========================================================================
+tat ca dataset co cap S1-S3: n_cap(hoi thoai)=219, mean(S1-S3)=+0.0061, mean|d|=0.0644
+             count    mean
+dataset                   
+annomi          40  0.0000
+cactus          20  0.0236
+cpsycoun        20  0.0389
+kmi             40 -0.0042
+psy_insight     20 -0.0028
+psydial         20  0.0264
+simpsydial      20 -0.0111
+smile           19  0.0102
+soulchat        20 -0.0097
+7 bo phi tieng Anh: n_cap(hoi thoai)=139, mean(S1-S3)=+0.0066, mean|d|=0.0837
+            count    mean
+dataset                  
+cpsycoun       20  0.0389
+kmi            40 -0.0042
+psydial        20  0.0264
+simpsydial     20 -0.0111
+smile          19  0.0102
+soulchat       20 -0.0097
+
+========================================================================
+B7. TAI DUNG DIEM PILOT trong 6.333 luot cham moi chieu
+========================================================================
+Dim A: cap (dataset,judge,iid) chung pilot-full = 657; diem full TRUNG KHOP diem pilot = 587 (9.3% cua 6.333)
+Dim B: cap chung pilot-full = 759; trung khop = 468 (7.4% cua 6.333)
+
+========================================================================
+B8. TY SO PHAN TACH: SD giua-bo / SD trong-bo trung binh
+========================================================================
+Chieu A: SD giua-bo=0.587, SD trong-bo trung binh=0.479, ty so=1.22
+Chieu B: SD giua-bo=0.286, SD trong-bo trung binh=0.415, ty so=0.69
+PASS | SD giua-bo A ~ 0.587 
+PASS | SD giua-bo B ~ 0.286 
+PASS | SD trong-bo B ~ 0.415 (so trong bai) | =0.415
+
+========================================================================
+B9. n hop le quy dao valence than chu (NEC) theo bo
+========================================================================
+               n  n_nec  pct_thieu
+dataset                           
+annomi       112    110        1.8
+cactus       200    200        0.0
+cpsycoun     200    182        9.0
+esconv       200    200        0.0
+kmi          200    200        0.0
+kokorochat   200    200        0.0
+psy_insight  200    141       29.5
+psydial      200    200        0.0
+simpsydial   200    200        0.0
+smile        199    197        1.0
+soulchat     200    200        0.0
+PASS | tong n_nec = 2030 | =2030
+
+========================================================================
+TONG KET ASSERT: 14/14 PASS

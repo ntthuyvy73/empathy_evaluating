@@ -1,0 +1,5 @@
+measure,pooled_z_r_lntok,b_ln,se_cluster,p_cluster
+WAI total (B),0.2977,0.3032,0.0393,0.0
+TRA (A),0.1355,0.1337,0.1046,0.23
+skill_core (A),0.0936,0.0333,0.1153,0.7784
+A overall,0.0536,-0.0195,0.1215,0.8759

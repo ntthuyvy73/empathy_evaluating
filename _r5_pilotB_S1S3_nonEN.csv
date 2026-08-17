@@ -1,0 +1,3 @@
+scope,n_pairs,mean_diff,mean_absdiff,datasets
+tat ca dataset co cap S1-S3,219,0.0061,0.0644,annomi;cactus;cpsycoun;kmi;psy_insight;psydial;simpsydial;smile;soulchat
+7 bo phi tieng Anh,139,0.0066,0.0837,cpsycoun;kmi;psydial;simpsydial;smile;soulchat

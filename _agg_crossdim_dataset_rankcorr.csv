@@ -1,0 +1,7 @@
+x,y,n,spearman,p
+dimA,dimB_3j,11,0.182,0.593
+dimA,client_valence_happy_ending,11,-0.369,0.264
+dimB_3j,client_valence_happy_ending,11,0.724,0.012
+dimA,client_valence_nec,11,-0.409,0.212
+dimB_3j,client_valence_nec,11,0.655,0.029
+dimB_3j,total_tokens,11,0.573,0.066

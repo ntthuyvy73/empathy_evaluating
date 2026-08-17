@@ -1,0 +1,6 @@
+metric,label,mean_human,mean_llm,n_human,n_llm,U_record,p_record,es_r,rank_biserial,p_dataset_exactMW,cliff_dataset,p_dataset_perm462
+counselor_valence_emo_mean,tong counselor,0.1635,0.185,871,1194,352702,7.30e-36,0.275,-0.322,0.0087,-0.933,0.0043
+client_valence_nec,NEC client,0.0471,0.0658,851,1179,448073,3.91e-05,0.091,-0.107,0.2468,-0.467,0.2359
+client_valence_emo_std,emo_std client,0.135,0.1371,851,1179,488945,3.29e-01,0.022,-0.025,0.7922,-0.133,0.5519
+valence_variability_ratio,variability ratio,1.1308,1.1376,835,1178,470565,9.82e-02,0.037,-0.043,0.6623,-0.2,0.9675
+client_valence_happy_ending,happy ending (0/1),0.7203,0.7515,851,1179,486035,1.15e-01,0.035,-0.031,0.7922,-0.167,0.5022

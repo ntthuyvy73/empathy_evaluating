@@ -1,0 +1,63 @@
+======================================================================
+ASSERT NEN - tai lap so cu tu bang master
+======================================================================
+PASS | n dialogue = 2111 | n=2111
+PASS | 11/11 dataset mean Dim A khop bang 00 SS5.1 (tol 0.0015) 
+PASS | 11/11 dataset mean Dim B khop bang 00 SS5.3 (tol 0.0015) 
+PASS | bang dichotomy human/llm khop _agg_counselor_words_dichotomy.csv (tol 0.0015) 
+
+======================================================================
+A1. HOI QUY PROVENANCE: OLS + cluster-robust SE + EXACT permutation cap dataset
+======================================================================
+PASS | total_tokens > 0 toan bo 
+so assignment hoan vi (exact): 92400 (ky vong 92400)
+PASS | enumerate exact = 92400 
+PASS | dimA_overall: he so OLS + R2 tai lap khop bang cu (tol 0.005) | b=(+0.219,-0.427,+0.387) R2=0.180
+PASS | dimA_overall: b_ln_tokens khop bang cu (tol 0.005) | b_ln=-0.019 (cu -0.019)
+dimA_overall: F_block=148.43, p_perm_exact(F)=0.44264; R2=0.180
+PASS | dimB_total3: he so OLS + R2 tai lap khop bang cu (tol 0.005) | b=(-0.186,-0.039,+0.237) R2=0.312
+PASS | dimB_total3: b_ln_tokens khop bang cu (tol 0.005) | b_ln=+0.303 (cu +0.305)
+dimB_total3: F_block=79.79, p_perm_exact(F)=0.12433; R2=0.312
+
+======================================================================
+A2. TUONG QUAN CAP DATASET (n=11): jackknife + bootstrap CI
+======================================================================
+PASS | spearman dimA-dimB khop bang cu (tol 0.005) | rho=0.182 (cu +0.182)
+dimA vs dimB: rho=+0.182 (p=0.5926) | jk [-0.006,+0.455] (nhay nhat: bo annomi -> +0.455) | boot95% [-0.523,+0.815] | cung dau 68.3%
+PASS | spearman dimA-happy khop bang cu (tol 0.005) | rho=-0.369 (cu -0.369)
+dimA vs happy: rho=-0.369 (p=0.2641) | jk [-0.596,-0.219] (nhay nhat: bo cpsycoun -> -0.596) | boot95% [-0.867,+0.351] | cung dau 85.0%
+PASS | spearman dimB-happy khop bang cu (tol 0.005) | rho=0.724 (cu +0.724)
+dimB vs happy: rho=+0.724 (p=0.0117) | jk [+0.632,+0.888] (nhay nhat: bo cactus -> +0.888) | boot95% [+0.089,+0.991] | cung dau 98.3%
+PASS | spearman dimA-nec khop bang cu (tol 0.005) | rho=-0.409 (cu -0.409)
+dimA vs nec: rho=-0.409 (p=0.2115) | jk [-0.636,-0.285] (nhay nhat: bo cpsycoun -> -0.636) | boot95% [-0.857,+0.249] | cung dau 89.6%
+PASS | spearman dimB-nec khop bang cu (tol 0.005) | rho=0.655 (cu +0.655)
+dimB vs nec: rho=+0.655 (p=0.0289) | jk [+0.539,+0.758] (nhay nhat: bo annomi -> +0.539) | boot95% [-0.009,+0.944] | cung dau 97.4%
+PASS | spearman dimB-tokens khop bang cu (tol 0.005) | rho=0.573 (cu +0.573)
+dimB vs tokens: rho=+0.573 (p=0.0655) | jk [+0.455,+0.685] (nhay nhat: bo psy_insight -> +0.455) | boot95% [-0.005,+0.891] | cung dau 97.4%
+
+======================================================================
+A3. DIM C human-viet vs LLM-viet: Mann-Whitney + effect size, 2 cap phan tich
+======================================================================
+tong counselor         human +0.1635 vs llm +0.1850 | record: p=7.3e-36, r=0.275, rbc=-0.322 | dataset(5v6): pMW=0.0087, cliff=-0.933, p_perm462=0.0043
+NEC client             human +0.0471 vs llm +0.0658 | record: p=3.9e-05, r=0.091, rbc=-0.107 | dataset(5v6): pMW=0.2468, cliff=-0.467, p_perm462=0.2359
+emo_std client         human +0.1350 vs llm +0.1371 | record: p=3.3e-01, r=0.022, rbc=-0.025 | dataset(5v6): pMW=0.7922, cliff=-0.133, p_perm462=0.5519
+variability ratio      human +1.1308 vs llm +1.1376 | record: p=9.8e-02, r=0.037, rbc=-0.043 | dataset(5v6): pMW=0.6623, cliff=-0.200, p_perm462=0.9675
+happy ending (0/1)     human +0.7203 vs llm +0.7515 | record: p=1.2e-01, r=0.035, rbc=-0.031 | dataset(5v6): pMW=0.7922, cliff=-0.167, p_perm462=0.5022
+
+======================================================================
+A4. BOOTSTRAP CI 95% (B=10000) cho mean cap dataset
+======================================================================
+annomi       A=3.621 [3.420,3.818] | B=3.760 [3.582,3.926] | happy=0.645 [0.554,0.736]
+cactus       A=3.376 [3.339,3.413] | B=4.290 [4.244,4.336] | happy=0.725 [0.665,0.785]
+psy_insight  A=3.364 [3.240,3.486] | B=3.605 [3.525,3.684] | happy=0.496 [0.411,0.582]
+simpsydial   A=3.188 [3.137,3.237] | B=4.335 [4.311,4.361] | happy=0.880 [0.835,0.925]
+kokorochat   A=2.917 [2.849,2.988] | B=4.046 [3.971,4.118] | happy=0.745 [0.685,0.805]
+kmi          A=2.653 [2.616,2.688] | B=4.088 [4.060,4.115] | happy=0.745 [0.685,0.805]
+psydial      A=2.481 [2.428,2.536] | B=4.182 [4.142,4.218] | happy=0.840 [0.790,0.890]
+smile        A=2.321 [2.261,2.380] | B=4.166 [4.113,4.216] | happy=0.792 [0.731,0.848]
+cpsycoun     A=2.285 [2.228,2.342] | B=3.418 [3.370,3.466] | happy=0.593 [0.522,0.665]
+soulchat     A=2.191 [2.144,2.237] | B=3.992 [3.950,4.032] | happy=0.760 [0.700,0.820]
+esconv       A=1.798 [1.750,1.848] | B=4.007 [3.935,4.076] | happy=0.775 [0.720,0.830]
+
+======================================================================
+TONG KET ASSERT: 16/16 PASS

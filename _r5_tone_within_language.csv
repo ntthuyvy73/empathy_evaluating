@@ -1,0 +1,3 @@
+language,human_datasets,llm_datasets,mean_human_conv,mean_llm_conv,n_human,n_llm,MW_p_record,rank_biserial,pairs_llm_higher
+EN,annomi;esconv;psy_insight,cactus,0.1552,0.1792,471,200,6.55e-13,-0.351,3/3
+ZH,psydial,cpsycoun;simpsydial;smile;soulchat,0.1735,0.1872,200,794,4.17e-10,-0.286,4/4

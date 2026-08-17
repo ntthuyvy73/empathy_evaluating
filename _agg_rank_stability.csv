@@ -1,0 +1,11 @@
+dim,so_sanh,n_ds,kendall_tau,p
+A,judge claude vs gemini,11,0.927,0.0
+A,judge claude vs gpt,11,0.891,0.0
+A,judge gemini vs gpt,11,0.891,0.0
+B,judge claude vs gemini,11,0.6,0.0099
+B,judge claude vs gpt,11,0.709,0.0016
+B,judge gemini vs gpt,11,0.6,0.0099
+B,pilot20 vs full200 (11 ds),11,0.564,0.0165
+A,"pilot20 vs full200 (11 ds, 3 judge)",11,0.818,0.0001
+A,pilot S1 vs S3 (7 ds),7,0.81,0.0107
+A,pilot S2 vs S3 (7 ds),7,0.905,0.0028

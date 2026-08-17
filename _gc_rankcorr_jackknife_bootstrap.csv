@@ -1,0 +1,7 @@
+x,y,rho,p,jk_min,jk_max,jk_most_influential,jk_rho_without_it,boot_ci_lo,boot_ci_hi,boot_same_sign_pct,robust
+dimA,dimB,0.182,0.5926,-0.006,0.455,annomi,0.455,-0.523,0.815,68.3,NO
+dimA,happy,-0.369,0.2641,-0.596,-0.219,cpsycoun,-0.596,-0.867,0.351,85.0,NO
+dimB,happy,0.724,0.0117,0.632,0.888,cactus,0.888,0.089,0.991,98.3,YES
+dimA,nec,-0.409,0.2115,-0.636,-0.285,cpsycoun,-0.636,-0.857,0.249,89.6,NO
+dimB,nec,0.655,0.0289,0.539,0.758,annomi,0.539,-0.009,0.944,97.4,NO
+dimB,tokens,0.573,0.0655,0.455,0.685,psy_insight,0.455,-0.005,0.891,97.4,NO

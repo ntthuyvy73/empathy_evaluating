@@ -1,0 +1,9 @@
+pair,level,n,stat,rho,p,jk_min,jk_max,jk_most_influential,jk_without,boot_lo,boot_hi,same_sign_pct
+TRA(A) <-> WAI(B),conversation pooled-z,2111,0.4767,,,,,,,,,
+TRA(A) <-> WAI(B),dataset spearman,11,,0.309,0.355,0.127,0.6,annomi,0.6,-0.412,0.86,79.7
+"skill_core = mean(CAC,AR) <-> WAI(B)",conversation pooled-z,2111,0.392,,,,,,,,,
+"skill_core = mean(CAC,AR) <-> WAI(B)",dataset spearman,11,,0.182,0.5926,-0.006,0.455,annomi,0.455,-0.519,0.815,68.8
+"A_minus_TRA = mean(CAC,EPC,AR,ACQ) <-> WAI(B)",conversation pooled-z,2111,0.3411,,,,,,,,,
+"A_minus_TRA = mean(CAC,EPC,AR,ACQ) <-> WAI(B)",dataset spearman,11,,0.045,0.8944,-0.103,0.297,annomi,0.297,-0.577,0.778,53.1
+TRA(A) <-> skill_core(A),conversation pooled-z,2111,0.8598,,,,,,,,,
+TRA(A) <-> skill_core(A),dataset spearman,11,,0.973,0.0,0.964,0.976,annomi,0.964,0.832,1.0,100.0

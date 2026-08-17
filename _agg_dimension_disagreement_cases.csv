@@ -1,0 +1,13 @@
+dataset,rid,dimA_overall,dimB_total3,client_valence_nec,zA,zC,loai,zB
+cactus,cactus_121,4.1,3.639,-0.081,2.715,-1.662,"A cao, C thap (troi chay nhung cam xuc khong cai thien)",
+psydial,psydial_196,3.433,4.407,-0.072,2.427,-1.963,"A cao, C thap (troi chay nhung cam xuc khong cai thien)",
+kmi,kmi_712,3.267,4.148,-0.268,2.314,-2.718,"A cao, C thap (troi chay nhung cam xuc khong cai thien)",
+psydial,psydial_108,3.367,4.25,-0.079,2.257,-2.072,"A cao, C thap (troi chay nhung cam xuc khong cai thien)",
+simpsydial,simpsydial_463,2.75,4.769,0.044,-1.211,,"B cao, A thap (lien minh tot nhung ky nang kem)",2.392
+simpsydial,simpsydial_934,2.65,4.741,0.268,-1.487,,"B cao, A thap (lien minh tot nhung ky nang kem)",2.239
+cactus,cactus_19,2.867,4.87,0.239,-1.91,,"B cao, A thap (lien minh tot nhung ky nang kem)",1.725
+simpsydial,simpsydial_97,2.567,4.62,0.096,-1.718,,"B cao, A thap (lien minh tot nhung ky nang kem)",1.574
+soulchat,soulchat_157820,1.8,3.898,0.511,-1.175,3.557,"A thap, C cao (ky nang kem nhung client van kha len)",
+psydial,psydial_959,2.033,4.37,0.229,-1.143,2.642,"A thap, C cao (ky nang kem nhung client van kha len)",
+esconv,esconv_43,1.333,3.185,0.359,-1.297,2.566,"A thap, C cao (ky nang kem nhung client van kha len)",
+cactus,cactus_19,2.867,4.87,0.239,-1.91,2.425,"A thap, C cao (ky nang kem nhung client van kha len)",
